@@ -2,4 +2,5 @@
     <string name="app_name">tema04ejercicio01</string>
     <string name="tvCapital">Capital:</string>
     <string name="tvPopulation">Population:</string>
+    <string name="tvCountryName">Country:</string>
 </resources>

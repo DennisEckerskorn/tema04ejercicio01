@@ -27,48 +27,25 @@ public class Country {
         return countryCode;
     }
 
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
-    }
 
     public String getCountryName() {
         return countryName;
-    }
-
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
     }
 
     public long getPopulation() {
         return population;
     }
 
-    public void setPopulation(long population) {
-        this.population = population;
-    }
-
     public String getCapital() {
         return capital;
-    }
-
-    public void setCapital(String capital) {
-        this.capital = capital;
     }
 
     public String getIsoAlpha3() {
         return isoAlpha3;
     }
 
-    public void setIsoAlpha3(String isoAlpha3) {
-        this.isoAlpha3 = isoAlpha3;
-    }
-
     public int getFlagResource() {
         return flagResource;
-    }
-
-    public void setFlagResource(int flagResource) {
-        this.flagResource = flagResource;
     }
 
     @Override

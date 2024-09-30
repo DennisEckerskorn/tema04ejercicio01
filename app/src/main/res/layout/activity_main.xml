@@ -8,6 +8,7 @@
     tools:context=".ui.MainActivity">
 
     <ListView
+        android:id="@+id/lvCountries"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
