@@ -2,6 +2,7 @@ package com.example.tema04ejercicio01.modelos;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -51,7 +52,7 @@ public class DomParser {
                     long population = Long.parseLong(element.getAttribute("population"));
                     String capital = element.getAttribute("capital");
                     String isoAlpha3 = element.getAttribute("isoAlpha3");
-                    int flagResource = getFlagResourceByIsoAlpha3(isoAlpha3, context);
+                    int flagResource = getFlagResourceByIsoAlpha3(countryCode, context);
 
                     Country country = new Country(countryCode, countryName, population, capital, isoAlpha3, flagResource);
                     countries.add(country);
@@ -62,9 +63,10 @@ public class DomParser {
     }
 
     @SuppressLint("DiscouragedApi")
-    private int getFlagResourceByIsoAlpha3(String isoAlpha3, Context context) {
+    private int getFlagResourceByIsoAlpha3(String countryCode, Context context) {
         String packageName = context.getPackageName();
-        String resourceName = "_" + isoAlpha3.toLowerCase();
+        String resourceName = "_" + countryCode.toLowerCase();
+        Log.d("CountryAdapter", "Generated resource name: " + resourceName);
         return context.getResources().getIdentifier(resourceName, "drawable", packageName);
     }
 

@@ -53,6 +53,12 @@ public class CountryAdapter extends ArrayAdapter<Country> {
             holder.tvCapital.setText(country.getCapital());
             holder.tvPopulation.setText(String.valueOf(country.getPopulation()));
 
+            /**TODO:
+             *  Aquí utilizamos la cadena desde los recursos
+             *  String populationText = getContext().getString(R.string.population_label, country.getPopulation());
+             *  holder.tvPopulation.setText(populationText);
+             */
+
         }
         return convertView;
     }
