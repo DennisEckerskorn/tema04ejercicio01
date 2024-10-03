@@ -3,16 +3,12 @@ package com.example.tema04ejercicio01.modelos;
 import java.util.Objects;
 
 public class Country {
-    private String countryCode;
-    private String countryName;
-    private long population;
-    private String capital;
-    private String isoAlpha3;
-    private int flagResource;
-
-    public Country() {
-
-    }
+    private final String countryCode;
+    private final String countryName;
+    private final long population;
+    private final String capital;
+    private final String isoAlpha3;
+    private final int flagResource;
 
     public Country(String countryCode, String countryName, long population, String capital, String isoAlpha3, int flagResource) {
         this.countryCode = countryCode;

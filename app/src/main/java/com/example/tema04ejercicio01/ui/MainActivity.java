@@ -1,6 +1,8 @@
 package com.example.tema04ejercicio01.ui;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -43,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
             // Crear el adaptador para los países y asociarlo al ListView
             CountryAdapter countryAdapter = new CountryAdapter(this, countries);
             ListView lvCountries = findViewById(R.id.lvCountries);
+
+            lvCountries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Toast.makeText(MainActivity.this, countries.get(i).getCountryName(), Toast.LENGTH_SHORT).show();
+
+                }
+            });
+
             lvCountries.setAdapter(countryAdapter);
         } catch (ParserConfigurationException | IOException | SAXException e) {
             // Manejo de excepciones en caso de error al cargar los datos
